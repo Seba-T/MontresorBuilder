@@ -1,6 +1,11 @@
 [package]
 name = "montresorbuilder"
 version = "0.1.0"
+author = "Sebastiano Tocci"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Seba-T/MontresorBuilder"
+homepage = "https://github.com/Seba-T/MontresorBuilder"
 edition = "2021"
 about = "A CLI to build a workspace suited to work on montresor's algorithm problems"
 
