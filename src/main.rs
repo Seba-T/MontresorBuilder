@@ -5,8 +5,6 @@ use clap::Parser;
 use std::fs;
 use crate::utils::*;
 
-const DEFAULT_PATH: &'static str = "~/Downloads";
-
 #[derive(Parser, Debug)]
 #[clap(author, version, about)]
 struct Args {
@@ -57,10 +55,8 @@ fn generate_project() -> Result<String, String> {
                 //now writing the package.json in the new directory
                 create_write_json(&project_name)?;
 
-                match fs::File::create(format!("{}.cpp", &project_name)) {
-                    Ok(_) => Ok("Success!".to_string()),
-                    Err(_) => Err("Error creating cpp file".to_string())
-                }
+                create_write_cpp(&project_name)?;
+                Ok("Success!".to_string())
             }
             Err(_) =>
                 Err("An error occurred while creating the project :/".to_string())
@@ -82,6 +78,6 @@ mod tests {
 
     #[test]
     fn generate_project_test() {
-        generate_project();
+        generate_project().expect("TODO: panic message");
     }
 }
