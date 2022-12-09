@@ -14,4 +14,7 @@ about = "A CLI to build a workspace suited to work on montresor's algorithm prob
 [dependencies]
 ansi_term = "0.12.1"
 clap = { version = "3.1.6", features = ["derive"] }
+futures = "0.3.25"
 home = "0.5.4"
+reqwest = { version = "0.11.13", features = ["cookies", "multipart"] }
+tokio = { version = "1.23.0", features = ["full"] }

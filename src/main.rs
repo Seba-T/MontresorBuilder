@@ -1,4 +1,5 @@
 mod utils;
+mod http_utils;
 
 use ansi_term::{self, Colour};
 use clap::Parser;
